@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.fit";
+option java_outer_classname = "FitTrain";
+option objc_class_prefix = "HLW";
+
+package com.fit;
+
+service FitTrainService {
+  rpc send (FitTrainRequest) returns (FitTrainReply) {}
+}
+
+message FitTrainRequest {
+  string name = 1;
+}
+
+message FitTrainReply {
+  string message = 1;
+}
